@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <!-- component -->
+<!-- This is an example component -->
+
+<p class="mt-5"><a href="/home/" class="text-blue-600 m-5 hover:underline">
+    <i class="fas fa-home"></i></a>
+</p>
+<div class="max-w-6xl mx-auto">
+
+	<div class="flex flex-col">
+    <div class="overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="inline-block min-w-full align-middle">
+            <div class="overflow-hidden ">
+                <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
+                    <thead class="bg-gray-100 dark:bg-gray-700">
+                        <tr>
+                            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                Name
+                            </th>
+                            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                city
+                            </th>
+                            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                Cuisine
+                            </th>
+                            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                Rating
+                            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                Address
+                            </th>
+                            <th scope="col" class="p-4">
+                                <span class="sr-only">Map</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                        {% for city in restaurants %}
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{city.name}}</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{city.city}}</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">{{city.cuisine}}</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{city.rating}}</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{city.address}}</td>
+                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <!-- <a href="https://www.google.com/maps/@{{city.Latitude}},{{city.Longitude}},18z" target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">view on map</a> -->
+                                <a href="{{city.link}}" target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">Open Menu</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<p class="mt-5"><a href="/home/" class="text-blue-600 m-5 hover:underline">
+    <i class="fas fa-home"></i></a>
+</p>
+</body>
+</html>

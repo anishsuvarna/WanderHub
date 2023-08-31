@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/frontPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swup/2.0.14/swup.min.js" integrity="sha512-/CTMe2SxxAmQ66WTDgHBoGz9/YerivYJdgSv5zzPW5l+tqq0CfdMlVDiga4NA9lkh7gXbouMwAbAcoGQ/KKz+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      const swap = new Swap();
+    </script>
+    <title>WanderHub</title>
+</head>
+  <body>
+    <main id="swup" class="transition-fade">
+    <h1 style="text-align: center; color: aliceblue;">WanderHub</h1>
+    <div style="margin-left: 10%;">
+      <img src="../static/logo.png" alt="logo" width="300" height="300">
+    </div>
+    <div class="container">
+    <a href="/city_search">
+        <div class="card">
+          <h3 class="title">Search Places</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50"/>
+          </svg>
+          </div>
+        </div>
+    </a>
+    <a href="/restaurant_search">
+        <div class="card">
+          <h3 class="title">Search Restaurant</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50"/>
+          </svg>
+          </div>
+        </div>
+    </a>
+  </div>
+  </main>
+  </body>
+</html>
